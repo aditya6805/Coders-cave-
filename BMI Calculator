@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class bmi 
+{
+   public static void main(String args[])
+   {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Input weight in kilogram: ");
+      double weight = sc.nextDouble();                                          //Taking user Input of weight
+
+      System.out.print("Input height in centimeters: ");
+      double height = sc.nextDouble();                                          //Taking user Input of Height
+      height/=100;
+      double BMI = weight / (height * height);                                  //Calculating BMI
+
+      System.out.println("The Body Mass Index (BMI) is " + BMI + " kg/m2");     //Printing the BMI
+      
+      if(BMI<=18.5)
+      {
+          System.out.println("you are in Underweight situation");
+      }
+      else if(BMI<=25)
+      {
+          System.out.println("you are in Normal situation");
+      }
+      else if(BMI<=30)
+      {
+          System.out.println("you are in Overweight situation");
+      }
+      else
+      {
+          System.out.println("you are in Obesity condition");
+      }                                                                          //printing BMI reorts
+   }
+}
